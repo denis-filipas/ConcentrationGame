@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="ConcentrationGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYb-8Y-r1R">
+                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <connections>
+                                    <segue destination="gbU-dC-uRr" kind="embed" identifier="EmbedCardCollection" id="4Im-UG-vOf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zYb-8Y-r1R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Dgd-rp-YCq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zYb-8Y-r1R" secondAttribute="bottom" constant="8" id="IBx-e3-M1z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zYb-8Y-r1R" secondAttribute="trailing" constant="8" id="KkP-lw-f02"/>
+                            <constraint firstItem="zYb-8Y-r1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="fug-SK-3uo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="-31"/>
+        </scene>
+        <!--Card Collection View Controller-->
+        <scene sceneID="MoG-rX-tML">
+            <objects>
+                <collectionViewController id="gbU-dC-uRr" customClass="CardCollectionViewController" customModule="ConcentrationGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bqa-vP-rji">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="631"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eyJ-ea-fzN">
+                            <size key="itemSize" width="86" height="103"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CardCell" id="hTH-90-Ddg" customClass="CardCell" customModule="ConcentrationGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="86" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="86" height="103"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InU-Wb-59a" customClass="CardView" customModule="ConcentrationGame" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="86" height="103"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="RAD-V1-2G5">
+                                                    <rect key="frame" x="22" y="41" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="RAD-V1-2G5" firstAttribute="centerX" secondItem="InU-Wb-59a" secondAttribute="centerX" id="aT2-Bb-cDu"/>
+                                                <constraint firstItem="RAD-V1-2G5" firstAttribute="centerY" secondItem="InU-Wb-59a" secondAttribute="centerY" id="d4j-PJ-KNw"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="faceLabel" destination="RAD-V1-2G5" id="Ikf-tb-H4X"/>
+                                            </connections>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="InU-Wb-59a" secondAttribute="bottom" id="3Qv-1c-EUA"/>
+                                    <constraint firstItem="InU-Wb-59a" firstAttribute="centerX" secondItem="hTH-90-Ddg" secondAttribute="centerX" id="46G-iE-en3"/>
+                                    <constraint firstAttribute="trailing" secondItem="InU-Wb-59a" secondAttribute="trailing" id="6gG-6Q-mVL"/>
+                                    <constraint firstItem="InU-Wb-59a" firstAttribute="centerY" secondItem="hTH-90-Ddg" secondAttribute="centerY" id="UVL-X2-Cpx"/>
+                                    <constraint firstItem="InU-Wb-59a" firstAttribute="leading" secondItem="hTH-90-Ddg" secondAttribute="leading" id="WfA-HO-kVH"/>
+                                    <constraint firstItem="InU-Wb-59a" firstAttribute="top" secondItem="hTH-90-Ddg" secondAttribute="top" id="gZC-lE-WU2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cardView" destination="InU-Wb-59a" id="ZCx-Zl-Ea9"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="gbU-dC-uRr" id="y5z-pG-KIQ"/>
+                            <outlet property="delegate" destination="gbU-dC-uRr" id="yXz-h2-thl"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="collectionView" destination="Bqa-vP-rji" id="fny-lE-TGT"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMP-q3-Oaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608.79999999999995" y="-31.03448275862069"/>
+        </scene>
+    </scenes>
+</document>
